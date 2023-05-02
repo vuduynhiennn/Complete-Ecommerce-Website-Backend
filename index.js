@@ -16,6 +16,8 @@ const blog_categoryRouter = require("./routes/blog_category.routes");
 const prod_categoryRouter = require("./routes/prod_category.routes");
 const brandRouter = require("./routes/brand.routes");
 const couponRouter = require("./routes/coupon.routes");
+const colorRouter = require("./routes/color.routes");
+const enqRouter = require("./routes/enq.routes");
 
 const dbConnect = require("./config/dbConnect");
 dbConnect();
@@ -32,6 +34,8 @@ app.use('/api/pcategory', prod_categoryRouter);
 app.use('/api/bcategory', blog_categoryRouter);
 app.use('/api/brand', brandRouter);
 app.use('/api/coupon', couponRouter);
+app.use('/api/color', colorRouter);
+app.use('/api/enquiry', enqRouter);
 
 app.use(notFound);
 app.use(errorHandler);
